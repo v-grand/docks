@@ -11,13 +11,12 @@ theme:
 nav:
   - Overview: index.md
   - Templates: templates.md
-  - Infrastructure:
-      - 'Infra Docs': infra-docks/index.md
+  - Infrastructure Docs: https://v-grand.github.io/infra-docks/en/ # ИСПРАВЛЕНО
 
 plugins:
   - search
   - awesome-pages
-  - mkdocs-jupyter # ИСПРАВЛЕНО
+  - mkdocs-jupyter
   - git-revision-date
 
 markdown_extensions:
