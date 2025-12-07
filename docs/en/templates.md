@@ -4,37 +4,126 @@ This section describes the standardized templates used to create new platform co
 
 ---
 
-### `template-service`
-
-**Repository:** `https://github.com/v-grand/template-service.git`
-
-This template is for quickly creating new microservices. It includes:
-
--   A basic Python application structure.
--   A ready-to-use `Dockerfile` for building the service.
--   Configuration examples for local and production environments.
--   A pre-configured CI/CD pipeline.
-
----
-
 ### `template-platform`
 
-**Repository:** `https://github.com/v-grand/template-platform.git`
-
-A template for creating a full-fledged platform from scratch. It combines all other components and serves as a starting point for deploying the entire stack. It includes:
-
--   A submodule structure for all services and infrastructure repositories.
--   `docker-compose.yml` for local development.
--   A `Makefile` with commands for project management.
+**Purpose:** Main repository: combines all services, manages startup and CI/CD
+**Inherits from:** —
 
 ---
 
-### `template-docks`
+### `template-service`
 
-**Repository:** `https://github.com/v-grand/template-docks.git`
+**Purpose:** Basic microservice (Model + Controller), Docker, tests, CI
+**Inherits from:** —
 
-A template for creating a documentation site like this one. It includes:
+---
 
--   A pre-configured `MkDocs` with the `material` theme.
--   Documentation structure examples.
--   A ready-to-use workflow for publishing the site to GitHub Pages.
+### `template-docs`
+
+**Purpose:** Project documentation (MkDocs + Material, Jupyter, GitHub Pages)
+**Inherits from:** —
+
+---
+
+### `template-infra-deployer`
+
+**Purpose:** CLI/service for deploying infrastructure (Terraform, Helm, Ansible)
+**Inherits from:** —
+
+---
+
+### `template-frontend`
+
+**Purpose:** SPA-client (React/Vue), Web3 connection, build, deploy
+**Inherits from:** —
+
+---
+
+### `template-model`
+
+**Purpose:** Data models, ORM, migrations, business logic
+**Inherits from:** template-service
+
+---
+
+### `template-controller`
+
+**Purpose:** REST/GraphQL API, validation, OpenAPI, connection to models
+**Inherits from:** template-service
+
+---
+
+### `template-worker`
+
+**Purpose:** Asynchronous tasks, queues, cron, Celery/RQ
+**Inherits from:** template-service
+
+---
+
+### `template-llm-router`
+
+**Purpose:** Service for routing between LLMs (GigaChat, YandexGPT, Ollama, etc.)
+**Inherits from:** template-service
+
+---
+
+### `template-nft-service`
+
+**Purpose:** Minting and managing NFTs, interacting with blockchain
+**Inherits from:** template-service
+
+---
+
+### `template-wallet-service`
+
+**Purpose:** Working with Web3 wallets, signing transactions, storing addresses
+**Inherits from:** template-service
+
+---
+
+### `template-payment-service`
+
+**Purpose:** Accepting crypto payments, integration with Web3 and fiat gateways
+**Inherits from:** template-service
+
+---
+
+### `template-monitoring`
+
+**Purpose:** Prometheus, Grafana, Loki, alerts, exporters
+**Inherits from:** —
+
+---
+
+### `template-testing`
+
+**Purpose:** Integration and e2e tests (pytest, Playwright, Postman, k6)
+**Inherits from:** —
+
+---
+
+### `template-lab`
+
+**Purpose:** Isolated laboratories: scenarios, environments, mini-platforms
+**Inherits from:** template-platform
+
+---
+
+### `template-devtools`
+
+**Purpose:** Set of utilities, CLI, generators, pre-commit hooks
+**Inherits from:** —
+
+---
+
+### `template-course`
+
+**Purpose:** Training courses, tutorials, steps, assignments
+**Inherits from:** template-docs
+
+---
+
+### `template-demo`
+
+**Purpose:** Demo examples, showcase, public stands
+**Inherits from:** template-platform
