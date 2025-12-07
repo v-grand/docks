@@ -3,3 +3,4 @@ mkdocs-material
 mkdocs-jupyter
 mkdocs-awesome-pages-plugin
 mkdocs-git-revision-date-plugin
+pymdown-extensions
