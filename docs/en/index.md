@@ -1,13 +1,47 @@
-# Platform Overview
+# Welcome to Docks
 
-Welcome to our project documentation! This platform is a comprehensive solution for developing, deploying, and managing microservices.
+This is the central documentation for our project, describing the architecture, templates, and services.
 
-## Key Components
+## 📚 Architecture Overview
 
-The platform consists of several key components, each in its own repository and managed as a submodule:
+The project is built on a microservice architecture using Git submodules to manage dependencies.
 
--   **Services**: Core business applications (`auth`, `api`, `frontend`).
--   **Infrastructure**: Terraform modules and configurations for cloud providers (`infra-aws`, `infra-gcp`).
--   **Templates**: Standardized templates for quickly creating new components.
+```
+┌─────────────────────┐
+│        docks        │  ← This documentation
+└─────────────────────┘
+          │
+          ├─► template-service (Template for new services)
+          ├─► template-platform (Template for a new platform)
+          └─► template-docks (Template for documentation)
+```
 
-For more details on templates, see the [Templates](templates.md) section.
+## 🗂️ Repository Guide
+
+### Templates
+
+| Repository | Purpose |
+|:------------|:-----------|
+| **[template-service]** | Template for creating new microservices. |
+| **[template-platform]**| Template for deploying the entire platform. |
+| **[template-docks]**   | Template for creating a documentation site. |
+
+## 🚀 Quick Start
+
+### Creating a new service
+
+1. **Clone the template:**
+   ```bash
+   git clone https://github.com/v-grand/template-service.git my-new-service
+   ```
+
+2. **Set up and run:**
+   ```bash
+   cd my-new-service
+   # Follow the instructions in the template's README.md
+   ```
+
+## 📖 Documentation Structure
+
+- **[Architecture](architecture.md)** - Description of the project architecture.
+- **[Templates](templates.md)** - Detailed description of each template.

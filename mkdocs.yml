@@ -1,37 +1,44 @@
-# Конфигурация сайта
-site_name: Project Docs
-site_url: https://v-grand.github.io/docks/
+site_name: Docks
 repo_url: https://github.com/v-grand/docks
-repo_name: v-grand/docks
 
-# Тема оформления
 theme:
   name: material
-  language: ru
-  logo: assets/logo.png # Предполагается, что логотип будет добавлен
-  favicon: assets/logo.png # Предполагается, что логотип будет добавлен
-  palette:
-    scheme: default
   features:
     - navigation.tabs
-    - navigation.top
+  language: en
+  logo: assets/logo.png
+  favicon: assets/logo.png
+  palette:
+    scheme: default
   icon:
     repo: fontawesome/brands/github
 
-# Навигация
 nav:
-  - 'Обзор': 'index.md'
-  - 'Шаблоны': 'templates.md'
-  - 'Документация по инфраструктуре': 'https://v-grand.github.io/infra-docks/en/'
+  - 'en':
+    - 'Home': 'en/index.md'
+    - 'Architecture': 'en/architecture.md'
+    - 'Templates': 'en/templates.md'
+  - 'ru':
+    - 'Главная': 'ru/index.md'
+    - 'Архитектура': 'ru/architecture.md'
+    - 'Шаблоны': 'ru/templates.md'
+  - 'pl':
+    - 'Strona główna': 'pl/index.md'
+    - 'Architektura': 'pl/architecture.md'
+    - 'Szablony': 'pl/templates.md'
 
-# Расширения Markdown
-markdown_extensions:
-  - admonition
-  - pymdownx.details
-  - pymdownx.superfences
-  - attr_list
-  - md_in_html
-
-# Плагины
 plugins:
   - search
+  - i18n:
+      default_language: en
+      languages:
+        en: English
+        ru: Русский
+        pl: Polski
+
+markdown_extensions:
+  - attr_list
+  - admonition
+  - pymdownx.details
+  - toc:
+      baselevel: 2
