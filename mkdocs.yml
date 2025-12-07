@@ -8,6 +8,7 @@ nav:
   - Architecture: architecture.md
   - Services:
     - ...
+  - Templates: templates.md
   - Infrastructure:
     - ...
   - Notebooks:
@@ -22,6 +23,7 @@ plugins:
 markdown_extensions:
   - admonition
   - codehilite
-  - toc
+  - toc:
+      permalink: true
   - tables
   - tabs
