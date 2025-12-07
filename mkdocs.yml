@@ -1,18 +1,18 @@
 site_name: Project Documentation
 site_url: https://example.com/
+
 theme:
   name: material
+  features:
+    - navigation.tabs # Включаем табы через тему
+  logo: assets/images/logo.svg
+  favicon: assets/images/logo.svg
 
 nav:
   - Overview: index.md
-  - Architecture: architecture.md
-  - Services:
-    - ...
   - Templates: templates.md
   - Infrastructure:
-    - ...
-  - Notebooks:
-    - ...
+      - 'Infra Docs': infra-docks/index.md # Ссылка на документацию infra-docks
 
 plugins:
   - search
@@ -25,5 +25,5 @@ markdown_extensions:
   - codehilite
   - toc:
       permalink: true
-  - tables
-  - tabs
+  - pymdownx.details # Полезное расширение из infra-docks
+  - attr_list # Полезное расширение из infra-docks

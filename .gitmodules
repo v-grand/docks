@@ -1,0 +1,3 @@
+[submodule "infra-docks"]
+	path = infra-docks
+	url = https://github.com/v-grand/infra-docks.git
